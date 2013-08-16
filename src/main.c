@@ -81,7 +81,13 @@
  * Local Types
  */
 
-/** Listing of colors we have available in our console. */
+/**
+ * Listing of colors we have available in our console. Note that the ordering
+ * of values here coincide with the ordering of values in the color_ansi_table[]
+ * variable below. Also know that the ordering and contents of this enum effect
+ * how we select which color next to use when choosing colors for a newly
+ * discovered tag or device name / serial number.
+ */
 enum color {
     COLOR_RED = 0,
     COLOR_GREEN,
@@ -126,7 +132,11 @@ struct device {
  * Local Variables
  */
 
-// Table that converts a color code to its respective ANSI.
+/**
+ * Table that converts a color code to its respective ANSI. Note that the
+ * values here are ordered according to the enum color type. This means that
+ * enum color and color_ansi_table must be kept synchronized.
+ */
 static uint8_t color_ansi_table[] = {
     31, // RED
     32, // GREEN
