@@ -1,0 +1,40 @@
+Android Log Colorizer
+=====================
+:author: Brandon Edens
+:date: 2013-08-15
+
+
+Introduction
+------------
+
+Congratulations in finding this Android log colorizer. This colorizer is based
+upon the data presentation and color scheme found in Jeff Sharkey's 
+http://jsharkey.org/blog/2009/04/22/modifying-the-android-logcat-stream-for-full-color-debugging/[logcat colorizer].
+In addition, this colorizer is written to simultaneously process log information
+from all connected Android devices while also implemented in C for maximum
+throughput.
+
+
+Quickstart
+----------
+
+android-log uses cmake and pthreads to compile. Please install these libraries
+onto your computer prior to attempting a build. To compile and execute use the
+standard cmake paradigm such as:
+
+[source,bash]
+----
+mkdir build
+cmake ~/path/to/android-log
+make
+./src/android-log
+----
+
+
+Hacking
+-------
+
+This software follows the following coding style. Bracing is 1TBS, 4 character
+indentation, all lower case function and variable names. All caps for constants
+separated by underscores. If in doubt refer to CERT secure coding C guide for
+advice in what is preferred style.
